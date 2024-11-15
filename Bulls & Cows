@@ -35,6 +35,8 @@ def validate_input(guessed_number, guessing_number, attempts):
     elif not len(guessed_number) == 4:
         print("You need to put 4-digit number!")
         return
+    elif len(set(guessed_number)) != 4:
+        print ("Your number cannot contain duplicate values!")
     else:
         compare_input(guessed_number, guessing_number, attempts)
 
